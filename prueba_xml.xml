@@ -1,0 +1,33 @@
+<continentes>
+
+<continente nombre="europa">
+<formato ancho="500" largo="500">
+Europa
+</formato>
+</continente>
+
+<continente nombre="asia">
+<formato ancho="500" largo="500">
+Asia
+</formato>
+</continente>
+
+<continente nombre="africa">
+<formato ancho="500" largo="500">
+África
+</formato>
+</continente>
+
+<continente nombre="america">
+<formato ancho="500" largo="500">
+América
+</formato>
+</continente>
+
+<continente nombre="oceania">
+<formato ancho="500" largo="500">
+Oceanía
+</formato>
+</continente>
+
+</continentes>
