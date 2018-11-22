@@ -6,14 +6,44 @@
   </head>
   <body>
     <h1>Formulario</h1>
-    <form>
-      <input value="Nombre" id="nombre"/>
-      <input value="Primer apellido"  id="primer_apellido"/>
-      <input value="Segundo apellido"  id="segundo_apellido"/><br/>
-      <input value="E-mail" id="email"/>
-      <input value="Password" id="pasword"/>
-      <input value="Repite password" id="pasword_rep"/><br/>
-      <textarea id="sugerencias">Desear&iacute;a</textarea>
+    <form action="mailto:correodeprueba@123.com" method="get">
+      <table align="center">
+<input type="submit"  value="enviar por mail"/>
+     <tr>
+       <td>Nombre</td>
+       <td><input id="nombre" size="30" maxlenght="50"/></td>
+     </tr>
+
+      <tr>
+        <td>Primer apellido</td>
+        <td><input id="primer_apellido" size="30" maxlenght="50"/></td>
+      </tr>
+
+      <tr>
+        <td>Segundo apellido</td>
+        <td><input id="segundo_apellido"size="30" maxlenght="50"/></td>
+      </tr>
+
+      <tr>
+        <td>E-mail</td>
+        <td><input id="email" size="30" maxlenght="50"/></td>
+      </tr>
+
+      <tr>
+        <td>Contrase&ntilde;a</td>
+        <td><input type="password" id="password"size="30" maxlenght="50"/></td>
+      </tr>
+
+      <tr>
+        <td>Repite contrase&ntilde;a</td>
+        <td><input id="password_rep"size="30" maxlenght="50"/></td>
+
+      <tr>
+        <td>Sugerencias</td>
+        <td><textarea id="sugerencias"size="30" maxlenght="50">Desear&iacute;a que...</textarea></td>
+      </tr>
+
+        </table>
 
     </form>
 
