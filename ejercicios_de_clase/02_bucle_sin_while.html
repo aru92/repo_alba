@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <html lang="es" dir="ltr">
+
   <head>
     <meta charset="utf-8">
-    <title>Bucles</title>
+    <title>Bucle sin While</title>
   </head>
 
   <body>
-    <h1>Yay!</h1>
+    <h1>Bucle sin While</h1>
   </body>
 
   <script type="text/javascript">
@@ -15,18 +17,17 @@
     var times = parseInt(prompt("¿Y cuántas veces?"))
     var count = 1
 
-    while (count<=times) {
-      if (start>end) {
-        alert("Cuenta atrás: " + start);
-        start = start-1;
+    if (start>end && count<end) {
+      alert("Cuenta atrás: " + start);
+      start = start-1;
+    }
+
+    if (start<end) {
+      alert("Cuenta adelante: " + start);
+      start = start+1;
       }
 
-      else if (start<end) {
-        alert("Cuenta adelante: " + start);
-        start = start+1;
-        }
-        count = count+1;
-    }
+      {count = count+1;}
 
   </script>
 
