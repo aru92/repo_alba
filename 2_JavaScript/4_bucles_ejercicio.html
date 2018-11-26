@@ -3,27 +3,30 @@
     <meta charset="utf-8">
     <title>Bucles</title>
   </head>
+
   <body>
     <h1>Yay!</h1>
-
   </body>
-  <script type="text/javascript">
-    var foo = parseInt(prompt("¿Desde dónde quieres empezar la cuenta?"));
-    var bar = parseInt(prompt("¿Hasta dónde quieres acabar la cuenta?"));
-    var baz = parseInt(prompt("¿Y cuántas veces?"))
-    var count = 1
-    while (count<=baz) {
-      if (foo>bar) {
-        alert("Cuenta atrás: " + foo);
-        foo = foo-1;
-      }
-      else if (foo<bar) {
-        alert("Cuenta adelante: " + foo);
-        foo = foo+1;
 
+  <script type="text/javascript">
+
+    var start = parseInt(prompt("¿Desde dónde quieres empezar la cuenta?"));
+    var end = parseInt(prompt("¿Hasta dónde quieres acaend la cuenta?"));
+    var times = parseInt(prompt("¿Y cuántas veces?"))
+    var count = 1
+
+    while (count<=times) {
+      if (start>end) {
+        alert("Cuenta atrás: " + start);
+        start = start-1;
       }
-      count = count+1;
+      else if (start<end) {
+        alert("Cuenta adelante: " + start);
+        start = start+1;
+        }
+        count = count+1;
     }
 
   </script>
+
 </html>
