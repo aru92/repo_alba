@@ -9,31 +9,44 @@
 
   </body>
   <script type="text/javascript">
-    var age;
-    age = prompt  ("Dime tu edad");
-    if (age < 18 ) {
+    var age = prompt("Dime tu edad:");
+    var ifIsAdult = age >= 18;
+
+    /*if (age < 18 ) {
 
       alert("Under age.");
 
     }
+*/
 
-var ifIsAdult = age >= 18;
 
 // Condici&oacute;n con bifurcaci&oacute;
 if ( ifIsAdult == true )
     { alert("Adult.");
   }
-    else{ alert("Under Age.")
+    else if
+      (age < 18 && age > 14 ){
+      alert("It is a teen!")
+    }
+
+    else if(age < 3)
+    {
+      alert ("It is a baby!")
+    }
+    else if (age < 14 )
+{
+      alert("It is a kid!")
 
     }
     //Ejemplos booleanos
-    if (true) {
+
+    /*if (true) {
       alert("It is true!");
 
     }
     if (false) {
     alert("It is false!");
-    }
+  }*/
 
   </script>
 </html>
