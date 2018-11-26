@@ -12,9 +12,16 @@
     var bar = parseInt(prompt("¿Hasta dónde quieres acabar la cuenta?"));
     var baz = parseInt(prompt("¿Y cuántas veces?"))
     var count = 1
-    while (foo>bar&&count<=baz) {
-      alert("Cuenta atrás: " + foo);
-      foo = foo-1;
+    while (count<=baz) {
+      if (foo>bar) {
+        alert("Cuenta atrás: " + foo);
+        foo = foo-1;
+      }
+      else if (foo<bar) {
+        alert("Cuenta adelante: " + foo);
+        foo = foo+1;
+
+      }
       count = count+1;
     }
 
