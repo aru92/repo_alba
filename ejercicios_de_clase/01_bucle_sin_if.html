@@ -17,15 +17,19 @@
     var times = parseInt(prompt("¿Y cuántas veces?"))
     var count = 1
 
-    while (count<end && count!=times &&start<end) {
-        alert("Cuenta adelante: " + start);
+    while (count<end && count!=times &&start<end) /*Mientras que el contador sea menor que fin,
+    y el contador sea distinto a las veces que se haga el bucle y que el comienzo sea menor que fin*/
+     {
+        alert("Cuenta adelante: " + start); /*Tiene que ir hacia adelante */
         start = start+1;
         {count = count+1}
 
     }
 
-    while (count<end && count!=times && end<start) {
-        alert("Cuenta atrás: " + start);
+    while (count<end && count!=times && end<start) /*Mientras que el contador sea menor que fin,
+    y el contador sea distinto a las veces que se haga el bucle y que el fin sea menor que comienzo */ {
+
+        alert("Cuenta atrás: " + start); /*Tiene que ir hacia atrás */
         start = start-1;
         {count = count+1}
         }
