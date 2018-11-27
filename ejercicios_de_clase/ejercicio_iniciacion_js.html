@@ -16,13 +16,22 @@
   var inicioNoEsUnNumero = isNaN(inicio);
 
 /*La ventana que ha de salir*/
-  alert(typeof (inicioNoEsUnNumero));
+  alert(typeof(inicioNoEsUnNumero));
+  alert(typeof("texto"));
+  alert(typeof(20));
 
 /*Condiciones para avanzar*/
 
 //Sin variable intermedia//
   while (isNaN(inicio)) {
   inicio = prompt("Indique el inicio");
+  }
+
+  while (typeof(fin) !="number") {
+    alert(typeof(fin));
+    fin=prompt("Indique el fin")
+    fin =parseInt(fin);
+
   }
 
 
