@@ -12,9 +12,22 @@
 
   <script type="text/javascript">
 
-    var start = parseInt(prompt("¿Desde dónde quieres empezar la cuenta?"));
-    var end = parseInt(prompt("¿Hasta dónde quieres acabar la cuenta?"));
+/*Valores*/
+    var start, end
     var count = 1
+
+/*Condiciones para avanzar*/
+
+    while (isNaN(start)==true) /* == es un operador lógico que analizan datos binarios (true/false)*/
+    {
+      start = parseInt(prompt("¿Desde dónde quieres empezar la cuenta?"));
+    }
+    while (isNaN(end)==true)
+    {
+     end = parseInt(prompt("¿Hasta dónde quieres acabar la cuenta?"));
+    }
+
+/*¿Cómo avanzar?*/
 
     while (count<end &&start<end)
 
@@ -23,6 +36,7 @@
         alert("Cuenta adelante: " + start); /*Tiene que ir hacia adelante */
         start = start+1;
         typeof(start);
+
     }
 
     while (count<end && end<start) /*Mientras que el contador sea menor que fin,
@@ -30,8 +44,13 @@
 
         alert("Cuenta atrás: " + start); /*Tiene que ir hacia atrás */
         start = start-1;
+
         }
+
+
+
       {count = count+1}
+
   </script>
 
 </html>

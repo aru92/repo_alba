@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bucles con isNaN</title>
+  </head>
+  <body>
+    <h1>Bucles con isNaN</h1>
+  </body>
+
+<script type="text/javascript">
+
+/*Valores*/
+  var inicio;
+  var fin;
+  var inicioNoEsUnNumero = isNaN(inicio);
+
+/*La ventana que ha de salir*/
+  alert(typeof (inicioNoEsUnNumero));
+
+/*Condiciones para avanzar*/
+
+//Sin variable intermedia//
+  while (isNaN(inicio)) {
+  inicio = prompt("Indique el inicio");
+  }
+
+
+/*Estos son otros modos, pero prefiero el primero*
+
+//Con variable intermedia//
+  var inicioNoEsUnNumero = isNaN(inicio);
+
+  while (inicioNoEsUnNumero) {
+  inicio=prompt("Indique el inicio");
+  inicioNoEsUnNumero = isNaN(inicio);
+}
+
+//Con variable intermedia legible//
+  var inicioNoEsUnNumero = ! isNaN(inicio);
+
+  while (inicioNoEsUnNumero==false) {
+  inicio=prompt("Indique el inicio");
+  inicioNoEsUnNumero=! isNaN(inicio);
+}
+
+*Estos son otros modos, pero prefiero el primero*/
+
+</script>
+
+</html>
