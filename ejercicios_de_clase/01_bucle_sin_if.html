@@ -14,29 +14,21 @@
 
     var start = parseInt(prompt("¿Desde dónde quieres empezar la cuenta?"));
     var end = parseInt(prompt("¿Hasta dónde quieres acabar la cuenta?"));
-    var times = parseInt(prompt("¿Y cuántas veces?"))
     var count = 1
 
-    while (count<end && count!=times &&start<end) /*Mientras que el contador sea menor que fin,
-    y el contador sea distinto a las veces que se haga el bucle y que el comienzo sea menor que fin*/
+    while (count<end &&start<end) {count = count+1} /*Mientras que el contador sea menor que fin,
+     y que el comienzo sea menor que fin*/
      {
         alert("Cuenta adelante: " + start); /*Tiene que ir hacia adelante */
         start = start+1;
-        {count = count+1}
+      }
 
-    }
-
-    while (count<end && count!=times && end<start) /*Mientras que el contador sea menor que fin,
-    y el contador sea distinto a las veces que se haga el bucle y que el fin sea menor que comienzo */ {
+    while (count<end && end<start) /*Mientras que el contador sea menor que fin,
+     y que el fin sea menor que comienzo */ {
 
         alert("Cuenta atrás: " + start); /*Tiene que ir hacia atrás */
         start = start-1;
-        {count = count+1}
         }
-
-
-
-
 
   </script>
 

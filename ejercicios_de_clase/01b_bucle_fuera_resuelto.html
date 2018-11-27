@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bucle fuera, Condidicional dentro</title>
+  </head>
+
+  <body>
+    <h1>Bucle fuera, Condidicional dentro</h1>
+  </body>
+
+<script type="text/javascript">
+
+  var start = prompt("Inicio en: ");
+  var end = prompt("Termina en: ");
+  start = parseInt(start);
+  end = parseInt(end);
+  var count = start;
+
+  /*Realizar una cuenta desde un comienzo a un final independientemente
+   de si el comienzo es posterior al final */
+
+   /*BUCLE FUERA CONDICIONAL POR DENTRO: bucle mientras que contador es distinto que fin*/
+
+   while (count != end) {
+     alert (count);
+     if (start < end) { /*De menor a mayor, 2, 3, 4*/
+       count = count +1;
+     }
+
+     else { /*cuando inicio es mayor, o igual*/
+       count = count-1;
+     }
+     
+   }
+   alert (count)
+
+</script>
+
+</html>
