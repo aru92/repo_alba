@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos JS</title>
+  </head>
+  <body>
+  <h1>Objetos JS</h1>
+  </body>
+
+  <script type="text/javascript">
+
+    //document: objeto que corresponde al documento HTML//
+    //write: es una función propia del objeto document, es decir, un método//
+
+    document.write("Mostrando"+" "+"texto");
+    document.write("<h2>Cabecera</h2>");
+
+    //Valores//
+
+    var nombre = "";
+    var textoEdad = "";
+    var edad = parseInt(textoEdad)
+
+    document.write("<br/>¡Anda!"+" "+"Si"+" "+"te"+" "+"llamas"+" "+(parseInt(nombre))+" "
+    +"y"+" "+"tienes"+" "+(textoEdad)+" "+"años")
+
+    //Condiciones para validar//
+
+
+   while(isNaN(edad)|| edad <=0){
+  textoEdad = prompt("¿Edad?");
+  edad = parseInt(textoEdad);
+  }
+
+
+
+  while (nombre==""||isNaN(parseInt(nombre)=true)) {
+    nombre = prompt("Introduzca nombre: ");
+  }
+  alert("Hola "+"Juan:"+"\n"+ "Tienes" +""\'20 "años\'"");
+
+
+  </script>
+
+</html>

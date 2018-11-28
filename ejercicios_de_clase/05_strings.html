@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Strings</title>
+  </head>
+  <body>
+    <h1>Strings</h1>
+  </body>
+  <script type="text/javascript">
+
+    var texto = prompt("Introduzca un texto");
+
+    document.write("Su texto: <br/>");
+    document.write(texto + "<br/>");
+
+    document.write("Longitud : ".concat(texto.length));
+    document.write("<br/>En mayúsculas: "+texto.toUpperCase()+"<br/>");
+    document.write("<br/>En minúscula: "+texto.toLowerCase()+"<br/>");
+    document.write("<br/>Primer car&aacute;cter: "+texto.charAt(0));
+    document.write("<br/>Tercer car&aacute;cter: "+texto.charAt(2));
+    document.write("<br/>Sexto car&aacute;cter: "+texto.charAt(5));
+    document.write("<br/>La mitad del texto: "+texto.substring(texto.length / 2));
+    document.write("<br/>Segunda mitad del texto: "+texto.substring(texto.length / 2));
+
+  </script>
+
+</html>
