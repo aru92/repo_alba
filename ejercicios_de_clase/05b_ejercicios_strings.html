@@ -22,14 +22,55 @@
     3-Mostrar sólo las iniciales
     "juan PÉREZ"->"J.P"
     */
+//1//
+  /*  document.write("<br/>" + texto.charAt(0).toUpperCase()
+    		     + texto.substring(1).toLowerCase()); */
 
-    var nombre = prompt("Introduzca su nombre");
+//3//
+/*
+    var texto = prompt("Introduce nombre y apellido")
+    var posPrimerEspacio = texto.indexOf(" "); //4
+    var primeraPalabra = texto.substring (0, posPrimerEspacio);
+    var segundaPalabra = texto.substring(posPrimerEspacio+1, texto.length);
+    var posSegundoEspacio = segundaPalabra.indexOf(" ");
+    var segundaPalabra = segundaPalabra.substring(posSegundoEspacio);
 
-    document.write("Su nombre: <br/>");
-    document.write(nombre + "<br/>");
-    document.write(nombre.toLowerCase)
-    document.write(nombre.toUpperCase(charAt(0)));
 
+    //Mostrar en Proper Case (Primera Mayúscula) SÓLO la primera palabra
+    document.write("<br/>"+primeraPalabra.charAt(0).toUpperCase()+primeraPalabra.substring(0+1).toLowerCase());
+    document.write(" "+segundaPalabra.charAt(0).toUpperCase()+segundaPalabra.substring(0+1).toLowerCase());
+*/
+
+  var texto = prompt("Introduce nombre y apellidos: ")
+  var posEspacio = texto.indexOf(" ");
+  var letra =texto.charAt(0).toUpperCase();
+  var iniciales= " ";
+  var minus=texto.substring(0).toLowerCase();
+
+  while(posEspacio>=0){
+    iniciales = iniciales + letra;
+    posEspacio = texto.indexOf(" ", posEspacio+1);
+    letra = texto.charAt(posEspacio+1).toUpperCase();
+  }
+
+  document.write(iniciales+"<br/>");
+
+/*
+  var texto ="juan pérez pérez";
+
+
+  document.write(texto+"<br/>");
+
+
+  var letra_2 = texto.charAt(posEspacio1+1).toUpperCase();
+  document.write(letra_2)
+
+  var posEspacio2 = texto.indexOf(" ", posEspacio1);
+  var letra_3 = texto.charAt(posEspacio2+1).toUpperCase();
+  document.write(letra_3)
+
+  var posEspacio3 = texto.indexOf(" ");
+  */
   </script>
 
 </html>

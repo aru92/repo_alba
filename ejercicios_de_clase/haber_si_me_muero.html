@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vamos a ver si sale esto</title>
+  </head>
+  <body>
+    <h1>Vamos a ver si sale esto</h1>
+  </body>
+  <script type="text/javascript">
+
+    var texto = "maria alfonsa teofila urraca de todos los santos muertos y resucitados y asi son zombies y protagonizan the walking dead";
+
+    var posEspacio = texto.indexOf(" ");
+    var inicial = texto.charAt(0).toUpperCase();
+    var resto = texto.substring(1, posEspacio).toLowerCase();
+    var propperCase = inicial+resto;
+    var posEspacio2 = texto.length;
+
+    while (posEspacio>=0) {
+    posEspacio2=texto.indexOf("", posEspacio+1);
+
+    if (posEspacio2==-1) {
+      posEspacio2 = texto.length;
+    }
+
+    inicial = texto.charAt(posEspacio+1).toUpperCase();
+    resto = texto.substring(posEspacio+2,posEspacio2);
+    propperCase = propperCase+""+inicial+resto;
+    posEspacio = texto.indexOf("",posEspacio+1);
+    }
+    document.write(propperCase+"<br/>");
+
+
+  </script>
+</html>
