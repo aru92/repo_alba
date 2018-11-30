@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplos de objetos</title>
+  </head>
+  <body>
+    <h1>Ejemplos de objetos</h1>
+  </body>
+  <script type="text/javascript">
+/*Llamamos a la función constructora del objeto básico de JS. Con la palabra clave "new",
+le decimos a JS. Con la palabra clave new, le decimos a JS que queremos un nuevo objeto
+(invocando a alguna funcion constructora) del tipo que sea, en este caso el básico de JS*/
+
+    /*var miPrimerObj = new Object();
+    miPrimerObj.unSubValor=10;
+    miPrimerObj.otraPropiedad = "Un texto";
+    miPrimerObj.atributoObjeto = new Object();
+    miPrimerObj.variableMiembro = true;*/
+
+    var persona_1 = new Object();
+    persona_1.nombre = "Ana";
+    persona_1.apellido_1 = "Perez";
+    persona_1.apellido_2 = "Rodriguez";
+    persona_1.edad = "25";
+    persona_1.salario = prompt("Dime el salario de "+persona_1.nombre);
+    persona_1.salario = parseFloat(persona_1.salario);
+
+
+
+    document.write(persona_1.nombre+" "+persona_1.apellido_1+" "+persona_1.apellido_2);
+    document.write("<br/>");
+    document.write("Edad: "+persona_1.edad);
+    document.write("<br/>")
+    document.write("Salario: "+persona_1.salario)
+
+    if(persona_1.salario>0){
+      persona_1.tieneTrabajo=true;
+    }
+    else {
+      persona_1.tieneTrabajo=false;
+    }
+
+    if(persona_1.tieneTrabajo){
+      document.write("<br/> Tiene trabajo");
+    }
+    else{
+      document.write("<br/> No tiene trabajo");
+    }
+
+    var persona_2 = new Object();
+    persona_2.nombre = "Alba";
+    persona_2.apellido_1 = "Martín";
+    persona_2.apellido_2 = "Ruiz";
+    persona_2.edad = "26";
+    persona_2.salario = prompt("Dime el salario de "+persona_2.nombre);
+    persona_2.salario = parseFloat(persona_2.salario);
+
+    document.write("<br/>");
+    document.write("<br/>");
+
+    document.write(persona_2.nombre+" "+persona_2.apellido_1+" "+persona_2.apellido_2);
+    document.write("<br/>");
+    document.write("Edad: "+persona_2.edad);
+    document.write("<br/>")
+    document.write("Salario: "+persona_2.salario)
+
+    if(persona_2.salario>0){
+      persona_2.tieneTrabajo=true;
+    }
+    else {
+      persona_2.tieneTrabajo=false;
+    }
+
+    if(persona_2.tieneTrabajo){
+      document.write("<br/> Tiene trabajo");
+    }
+    else{
+      document.write("<br/> No tiene trabajo");
+    }
+
+    var orden=prompt("Pulsa n para ver los datos por orden de nombre, a para verlo por apellido, e para verlo por edad ")
+
+
+    if(orden=="a"){
+    if (persona_1.apellido_1 < persona_2.apellido_1) {
+      document.write(persona_1.apellido_1);
+      document.write(persona_2.apellido_1);
+    }
+    else{
+      document.write(persona_2.apellido_1);
+      document.write(persona_1.apellido_1);
+    }
+    }
+
+    else if(orden == "n"){
+    if (persona_1.nombre < persona_2.nombre) {
+      document.write(persona_1.nombre);
+      document.write(persona_2.nombre);
+    }
+    else{
+      document.write(persona_2.nombre);
+      document.write(persona_1.nombre);
+
+    }
+    }
+
+    else if(orden=="e"){
+    if (persona_1.edad < persona_2.edad) {
+      document.write(persona_1.edad);
+      document.write(persona_2.edad);
+    }
+    else {
+      document.write(persona_2.edad);
+      document.write(persona_1.edad);
+
+    }
+    }
+
+
+  </script>
+</html>

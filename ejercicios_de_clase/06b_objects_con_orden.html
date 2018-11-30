@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objects con orden</title>
+  </head>
+  <body>
+    <h1>Objects con orden</h1>
+  </body>
+  <script type="text/javascript">
+
+    var persona_1 = new Object();
+    persona_1.nombre = "Ana";
+    persona_1.apellido_1 = "Perez";
+    persona_1.apellido_2 = "Rodriguez";
+    persona_1.edad = "25";
+    persona_1.salario = prompt("Dime el salario de "+persona_1.nombre);
+    persona_1.sueldo = parseFloat(persona_1.salario);
+
+    persona_1.datos = persona_1.nombre+"<br/>"+persona_1.apellido_1+"<br/>"+persona_1.apellido_2+"<br/>"
+    +persona_1.sueldo;
+
+    document.write("<br/>");
+    document.write("<br/>");
+
+    var persona_2 = new Object();
+    persona_2.nombre = "Alba";
+    persona_2.apellido_1 = "Martín";
+    persona_2.apellido_2 = "Ruiz";
+    persona_2.edad = "22";
+    persona_2.salario = prompt("Dime el salario de "+persona_2.nombre);
+    persona_2.sueldo = parseFloat(persona_2.salario);
+
+    persona_2.datos = persona_2.nombre+"<br/>"+persona_2.apellido_1+"<br/>"+persona_2.apellido_2+"<br/>"
+    +persona_2.sueldo;
+
+    document.write("<br/>");
+
+    var orden=prompt("Pulsa n para ver los datos por orden de nombre, a para verlo por apellido, e para verlo por edad ")
+
+
+    if(orden=="a"){
+
+    if (persona_1.apellido_1 < persona_2.apellido_1) {
+      document.write(persona_1.datos);
+      document.write(persona_2.datos);
+    }
+    else{
+      document.write(persona_2.datos);
+      document.write(persona_1.datos);
+    }
+    }
+
+    else if(orden == "n"){
+    if (persona_1.nombre < persona_2.nombre) {
+      document.write(persona_1.datos);
+      document.write(persona_2.datos);
+    }
+    else{
+      document.write(persona_2.datos);
+      document.write(persona_1.datos);
+
+    }
+    }
+
+    else if(orden=="e"){
+    if (persona_1.edad < persona_2.edad) {
+      document.write(persona_1.edad);
+      document.write(persona_2.edad);
+    }
+    else {
+      document.write(persona_2.edad);
+      document.write(persona_1.edad);
+
+    }
+    }
+
+
+  </script>
+</html>
