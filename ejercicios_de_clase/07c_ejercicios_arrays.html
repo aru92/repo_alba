@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicios de Arrays</title>
+  </head>
+  <body>
+    <h1>Ejercicios de Arrays</h1>
+  </body>
+
+  <script type="text/javascript">
+
+var ciudades= new Array();
+var nuevaCiudad=prompt("Introduce ciudad");
+
+//ciudades[0]= nuevaCiudad;
+//ciudades[1]= "Barcelona";
+//ciudades[2]= "Córdoba";
+
+var i = 0;
+
+
+while (nuevaCiudad !=""){
+  ciudades[i] = nuevaCiudad;
+  i = i+1;
+  nuevaCiudad = prompt("Introduce nueva ciudad")
+}
+
+i=0;
+
+while(i<ciudades.length){
+  document.write("<br/>"+ciudades[i]);
+  i = i+1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
