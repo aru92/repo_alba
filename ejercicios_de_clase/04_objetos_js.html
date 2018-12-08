@@ -21,24 +21,30 @@
     var nombre = "";
     var textoEdad = "";
     var edad = parseInt(textoEdad)
+    var textoNombre = "";
 
-    document.write("<br/>¡Anda!"+" "+"Si"+" "+"te"+" "+"llamas"+" "+(parseInt(nombre))+" "
-    +"y"+" "+"tienes"+" "+(textoEdad)+" "+"años")
+
 
     //Condiciones para validar//
+
+
+     textoNombre = prompt("¿Nombre?");
+  
 
 
    while(isNaN(edad)|| edad <=0){
   textoEdad = prompt("¿Edad?");
   edad = parseInt(textoEdad);
+
   }
+  document.write("<br/>¡Anda!"+" "+"Si"+" "+"te"+" "+"llamas"+" "+(textoNombre)+" "
+  +"y"+" "+"tienes"+" "+(textoEdad)+" "+"años")
 
 
 
-  while (nombre==""||isNaN(parseInt(nombre)=true)) {
-    nombre = prompt("Introduzca nombre: ");
-  }
-  alert("Hola "+"Juan:"+"\n"+ "Tienes" +""\'20 "años\'"");
+
+
+
 
 
   </script>

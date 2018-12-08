@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sudoku</title>
+  </head>
+  <body>
+    <h1>Sudoku</h1>
+  </body>
+
+  <script type="text/javascript">
+    var matriz = new Array();
+    for(var x=0; x<9; x++){
+      matriz[x] = new Array();
+      for(var y=0; y<9; y++){
+        matriz[x][y]=Math.floor(Math.random()*9+1);
+      }
+    }
+    document.write("<table border =\"2px\">");
+      for(var i=0; i<matriz.length;i++){
+        document.write("<tr>");
+        for(var j=0; j<matriz[i].length; j++){
+          document.write("<td>"+matriz[i][j]+"</td>");
+        }
+        document.write("</tr>")
+      }
+
+    document.write("</table>");
+
+
+
+  </script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplos de bucles for y do-while</title>
+  </head>
+  <body>
+    <h1>Ejemplos de bucles for y do-while</h1>
+
+  </body>
+  <script type="text/javascript">
+
+    document.write("<table border =\"2\">");
+
+    for(var i = 1; i<=9; i++)//+= es la abreviatura de i=i+1. También es i++
+    {
+      document.write("<tr><th>Tabla del "+ i +"</th>");
+
+      for(var j=0; j<=10; j++){
+        document.write("<td>"+ i + " x " + j + "=" + i*j + "</td>");
+      }
+      document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+
+
+  </script>
+</html>
