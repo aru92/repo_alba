@@ -34,13 +34,15 @@
 
   </div>
   <script>
-  
+
     var unDiv = document.getElementById("un_div");
     var nodoH2 = document.createElement("h2");
     var textoEnH1 = document.createTextNode("Un subtitulo añadido por JS");
 
     nodoH2.appendChild(textoEnH1);
     unDiv.appendChild(nodoH2);
+    
+    document.getElementsByTagName("p")[0].appendChild(document.createTextNode("TEXTO APPEND"));
 
   </script>
 </body>
