@@ -10,11 +10,32 @@
 <body>
   <h1>Cabecera</h1>
 </body>
-<script src="main.js">
+<script>
 
-function muestraSeisCabeceras(titulo) {
-  return "Cabeceras"
+function muestraSeisCabeceras(texto) {
+
+for (var nivel = 1; nivel <= 6; nivel++)  {
+  var abreH = "<h" + i + ">";
+  var cierraH = "</h" + i + ">";
+     document.write(abreH + muestraSeisCabeceras + cierraH); 
+} 
+
+function dameCabecera(texto, nivel){
+  var abreH = "<h" + i + ">";
+  var cierraH = "</h" + i + ">";
+  return abreH+texto+cierraH;
 }
+
+function muestraSeisCabeceras(titulo){
+  for (var i = 1; i <=6; i++){
+  document.write(dameCabecera(titulo, i));
+  }
+}
+
+
+
+
+
 
 </script>
 </html>
