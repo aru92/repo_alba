@@ -26,7 +26,7 @@
 
     divMensaje.innerHTML="Numero "+ valorNum;
 
-    if(valorNum<0|| valorNum>999){
+    if(valorNum<0|| valorNum>999 || isNaN(valorNum)){
       divMensaje.innerHTML="Error: Introduzca número positivo menor que 1000";
     }else{
       if(valorNum<10){
@@ -38,15 +38,16 @@
     else{
       divMensaje.innerHTML = "3 cifras"
     }
+    var valorNumEnTexto = "" + valorNum;
+    if(valorNum < 0 || valorNum>999){
+      divMensaje.innerHTML +="<br />Error: Introduzca número positivo menor que 1000";
+      }else{
+      divMensaje.innerHTML ="<br />"+valorNumEnTexto.length+" cifras";
+        }
     }
   }
 
-  var valorNumEnTexto = "" + valorNum;
-  if(valorNum < 0 || valorNum >999){
-    divMensaje.innerHTML +="<br/>Error: Introduzca número positivo menor que 1000";
-  }else{
-    divMensaje.innerHTML ="<br/>"+valorNumEnTexto.length+"cifras";
-  }
+  
 </script>
 </body>
 
