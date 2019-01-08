@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicios de JavaScript</title>
+</head>
+<body>
+<h1>Ejercicios de JavaScript</h1>
+<input id="inputNum" type="number" placeholder="Indique un número de hasta 3 cifras"/>
+<input type="button" onclick="funNumCifras();"value ="Calcular la cifra"/>
+<div id="divMensaje">
+
+</div> 
+<script>
+  function funNumCifras(){
+    var inputNum = document.getElementById("inputNum");
+    var valorNum = parseInt(inputNum.value);
+    var nodeResult = document.createTextNode("Numero "+valorNum);
+    var divMensaje = document.getElementById("divMensaje");
+
+    var nodeResult=document.createTextNode("Numero "+valorNum);
+
+    divMensaje.childNodes[0] = "Numero "+ valorNum;
+
+    divMensaje.innerHTML="Numero "+ valorNum;
+
+    if(valorNum<0|| valorNum>999){
+      divMensaje.innerHTML="Error: Introduzca número positivo menor que 1000";
+    }else{
+      if(valorNum<10){
+        divMensaje.innerHTML ="1 cifra";
+    }
+    else if(valorNum<100){
+      divMensaje.innerHTML ="2 cifras";
+    }
+    else{
+      divMensaje.innerHTML = "3 cifras"
+    }
+    }
+  }
+
+  var valorNumEnTexto = "" + valorNum;
+  if(valorNum < 0 || valorNum >999){
+    divMensaje.innerHTML +="<br/>Error: Introduzca número positivo menor que 1000";
+  }else{
+    divMensaje.innerHTML ="<br/>"+valorNumEnTexto.length+"cifras";
+  }
+</script>
+</body>
+
+
+</html>
