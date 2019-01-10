@@ -1,6 +1,6 @@
 var listaPersonas
 
-jQuery().ready(function(){
+jQuery(document).ready(function(){
   listaPersonas = new Array();
   jQuery("*").css("border-color", "red");
 });
