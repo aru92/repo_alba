@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Excepciones</title>
+</head>
+<body>
+  <div id="div_texto"></div>
+  <input type="text" id="demo">
+  <script src="jquery-3.3.1.js"></script>
+    <script>
+      function botonPulsado(){
+        var x;
+        $("#div_texto")
+      try {
+        throw "Provocando un error";
+        $("?div_texto").html("<br/>Eeeeeeeeh!");
+        funcionInexistente("Buuuu!");
+
+      }catch(elError){
+        $("#div_texto").append("<p>Ha habido una excepción</p>");
+        $("#div_texto").append(elError.message);
+
+
+      }finally{
+      $("#div_texto").append("<br/>Comprobando FINALLY");
+
+      }
+      $("#div_texto").append("<br/>El programa se sigue")
+    }
+    $(document).ready(funcionPrincipal);
+    </script>
+    
+  
+</body>
+</html>
