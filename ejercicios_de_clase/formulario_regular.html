@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios HTML5 Regulares</title>
+</head>
+
+<body>
+    <!-- Cabecera de la web -->
+    <header>
+        <h1>Formularios HTML5 Regulares</h1>
+    </header>
+
+    <section>
+        <form id="miform" method="get" >
+            Nombre: <input type="text" id="nombre" 
+            placeholder="Introduzca el nombre correctamente" 
+            pattern="^[A-Z]{1}[a-z]+( [A-Z]{1}[a-z]+)?$"
+            autofocus/><br/>
+            <!--el + indica que la letra o número se pueda añadir 
+            una o más veces-->
+            <!--Edad mediante expresión regular-->
+            Edad: <input type="number" id="numero"
+            placeholder="Introduzca la edad correctamente"
+            pattern="1?\d{1,2}$"/
+            required="true"><br/>
+            E-mail: <input type="email" id="mi_email" multiple="true" autofocus/><br/>
+            B&uacute;squeda: <input type="search" id="busqueda"/><br/>
+            URL: <input type="url" id="miurl">
+            <!--Teléfono mediante expresión regular-->
+            Tel&eacute;fono: <input type="tel" id="telefono"
+            placeholder="Introduzca el teléfono correctamente"
+            pattern="^d{2}-? ?\{7}|^\d{3}-? ?\d{6}$"/><br/> 
+            <!--Código postal mediante exp regular-->
+            C&oacute;digo postal: 
+                <input type="number" id="num_min"min="5" max="50" step="3"
+                placeholder="Introduzca el código postal correctamente"
+                pattern="[0-5]\d{4}$"  /><br/>
+            <!--DNI con exp regular-->
+            DNI:
+                <input type="text" id="num_dni"  
+                placeholder="Introduzca DNI"
+                pattern="[0-9]{6,8}-?[A-Z]$"/><br />
+            
+            <input type="submit" value="Enviar"/><br/>
+        </form>
+    </section>
+    <!--se asocia al formulario que corresponda por ID-->
+    <input type="text" id="otra_cosa" form="miform"/>
+    
+    </datalist>
+</body>
+
+</html>
