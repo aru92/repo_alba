@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Repaso CSS3</title>
+    <style type="text/css">
+      /* Selector hermanos */
+      h1~h2{
+        color:aquamarine;
+      }
+
+      div > h2{
+        color: azure;
+      } 
+      h1~h2, div > h2{
+        background-color: paleturquoise;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>T&iacute;tulo</h1>
+    <h2>T&iacute;tulo adyacente</h2>
+
+    <div>
+      <h2>Subt&iacute;tulo adyacente sin H1 de hermano</h2>
+      <h2>Subt&iacute; adyacente</h2>
+    </div>
+
+    <h1>T&iacute;tulo</h1>
+    <p>P&aacute;rrafo adyacente</p>
+    <h2>T&iacute;tulo adyacente con selector general de hermanos</h2>
+  
+  </body>
+</html>

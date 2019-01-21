@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Atributos</title>
+  <style>
+    a[href]{
+      font-size: 20px;
+    }
+    a[href="mailto:direccion@correo.com"]{
+      font-size: 8px;
+      background-color: salmon;
+    }
+    a[href*="ejemplo"]{
+      color: slateblue;
+    }
+    a[href^="mailto"]{
+      color: paleturquoise;
+    }
+    a[href$="php"]{
+      color: deeppink;
+    }
+    a:hover{
+      background-color: darkorchid;
+      font-size: 22px;
+    }
+    input:focus{
+      background-color: darkmagenta;
+    }
+    input:invalid{
+      background-color: darkcyan; 
+    }
+    input:nth-child(even){
+      background-color: springgreen;
+
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a>Enlace sin HREF</a></li>
+    <li><a href="https://www.w3schools.com/">Enlace a ejemplo</a></li>
+    <li><a href="mailto:direccion@correo.com">Enlace a email</a></li>
+    <li><a href="https://www.w3schools.com/ejemplo.php">Enlace a fichero PHP</a></li>
+  </ul>
+  <form>
+    <input type="text" required/><br/>
+    <input type="text" required/><br/>
+    <input type="text" required/><br/>
+    <input type="text" required disabled value="Deshabilitado"><br/>
+  </form>
+</body>
+</html>
