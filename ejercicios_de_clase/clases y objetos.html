@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clases y objetos POO</title>
+</head>
+<body>
+  <h1>Clases y objetos POO </h1>
+  <script>
+    //Sólo en EcmaScript 6 se puede omitir la palabra function 
+    class Rectangulo{
+      constructor(){
+        //Se definen las características fijas que todo objeto tiene que tener
+        this.ancho=0;
+        this.alto=0;
+        }
+      //Sólo ponemos el nombre del método, y los parámetros entre paréntesis, seguido del cuerpo
+      area(){//método
+        var areaTotal = this.ancho*this.alto;
+        return areaTotal;
+        }
+      }
+    var unRect = new Rectangulo();
+    unRect.ancho=10;
+    unRect.alto=6;
+    document.write("<h3>"+unRect.area()+"</h3>");
+
+      
+      class Circulo{
+        
+        constructor(radio /*variable local*/){
+          this.radio /*variable miembro (propiedad de la clase)*/ = radio;
+        }
+        area(){
+          return this.radio * Math.pow(this.radio, 2);
+        }
+        perimetro(){
+          return 2 * this.radio * Math.PI;
+        }
+        }
+        var unCirc= new Circulo(10); // radio =10
+        document.write(`Radio: ${unCirc.radio} <br/>
+        Area: ${unCirc.area()}<br/>
+        Perimetro: ${unCirc.perimetro()}`);
+     
+
+  
+  </script>
+</body>
+</html>

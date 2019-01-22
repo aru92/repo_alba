@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clases personas</title>
+</head>
+<body>
+  <h1>Personas</h1>
+  <script>
+    class Personas{
+      constructor(nombre, fechaNacimiento){
+        this.nombre = nombre;
+        var fechaActual = new Date();
+        this.edad = fechaActual.getFullYear()-fechaNacimiento.getFullYear();
+      }
+      esAdulto(){
+        
+        if (this.edad < 18){
+          return this.nombre + " NO es adulto porque tiene "+ this.edad+ " años <br/>";
+        }else {
+          return `${this.nombre} es adulto porque tiene ${this.edad} años <br/>`;
+        }
+      }
+    }
+    
+   var juan = new Personas("Juan",new Date(2008,10,5));
+   var ana = new Personas("Ana", new Date(1998, 11, 5));
+   var alberto = new Personas("Alberto", new Date(1988, 12, 5));
+   document.write(juan.esAdulto());
+   document.write(ana.esAdulto());
+   document.write(alberto.esAdulto()); 
+  </script>
+</body>
+</html>
