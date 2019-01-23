@@ -8,9 +8,7 @@
 </head>
 <body>
   <div id="div_texto"></div> 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="jquery-3.3.1.js"></script>
   <script>
     function dameHora (){
       var fechaActual = new Date();
@@ -37,7 +35,7 @@
     var posX = 0;
     function moverDiv(){
       var valoresCss = new Object();
-      valoresCss.marginLeft: posX + "px"
+      valoresCss.marginLeft= posX + "px"
       $("#div_texto").css(valoresCss);
       posX++
     }

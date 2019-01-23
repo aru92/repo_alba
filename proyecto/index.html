@@ -114,7 +114,7 @@
 		<div id="div_listado">
 			<h2>Listado CVs y Portfolios</h2>
 			<h3>Usando de bootstrap: .table .table-striped .table-bordered .table-hover .table-sm</h3>
-			<table>
+			<table class="table tabled-striped table-bordered table-hover table-sm">
 				<thead>
 					<tr>
 						<th>Nombre</th>
@@ -122,7 +122,7 @@
 						<th>Curriculum</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="tbody_listas_cvs">
 					<!-- Todos estos serán eliminados -->
 					<tr>
 						<td>Ana Perez</td>
@@ -138,12 +138,12 @@
 			</table>
 		</div>
 		<div id="div_de_1_en_1">
-			<div >
-				<input  type="button" value="&laquo;" />
-				<div > </div>
-				<input type="button" value="&raquo;"  />
+			<div class="form-group row">
+				<input id="btnAnterior" class="btn btn-default col-sm-1"  type="button" value="&laquo;" />
+				<div class="col-sm-6" > </div>
+				<input type="button" id="btnSiguiente" class="btn btn-default col-sm-1" value="&raquo;"  />
 			</div>
-			<div>
+			<div id="div_cv">
 				<h1>Curriculum Vitae</h1>
 				<h2>Datos personales</h2>
 				<dl>
@@ -155,11 +155,11 @@
 				<div>
 					<figure>
 						<!-- Ver más de https://uniwebsidad.com/libros/bootstrap-3/capitulo-4/imagenes -->
-						<img src="images/nom_apell_1.jpg" alt="Foto de Nombre y Apell">
+						<img id="img_foto" src="images/nom_apell_1.jpg" alt="Foto de Nombre y Apell">
 						<figcaption>Foto o dibujo</figcaption>
 					</figure>
 					<h2>Descripción</h2>
-					<div>
+					<div id="texto_descripcion">
 						<ul>
 							<li>
 								<h3>Grado Superior en Lo que sea </h3>
@@ -168,13 +168,13 @@
 							</li>
 						</ul>
 					</div>
-					<a  href="ejemplo_cv_1.html">Ver CV completo</a>
+					<a  id="enlace_cv "href="ejemplo_cv_1.html">Ver CV completo</a>
 				</div>
 			</div>
 			<div >
-				<input  type="button" value="&laquo;" />
+				<input id="btnAnterior" class="btn btn-default col-sm-1" type="button" value="&laquo;" />
 				<div > </div>
-				<input  type="button" value="&raquo;" />
+				<input id="btnSiguiente" class="btn btn-default col-sm-1" type="button" value="&raquo;" />
 			</div>
 		</div>
 	</section>
