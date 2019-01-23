@@ -26,7 +26,7 @@
       getDia(){
         var valorDia = parseInt($(`#${this.id}in_dia`).val());
         if (isNaN(valorDia)) alert("Dia tiene que ser un número");
-        else if (valorDia < 1 || valorDia > 31 ) alert("Dia fuera de rango");
+        else if (valorDia < 0 || valorDia > 31 ) alert("Dia fuera de rango");
           return valorDia;
        
       }
@@ -37,7 +37,9 @@
       }
       getAnio(){
       return parseInt($(`#${this.id}in_anio`).val());
-    
+      if (isNaN(valorAnio)) alert("Anio tiene que ser un número");
+      else if (valorAnio < 1970 || valorAnio> 2019 ) alert("Anio fuera de rango");
+        return valorAnio;
       }
     }
     /*var dateActual = new Date();
