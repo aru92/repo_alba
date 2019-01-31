@@ -230,48 +230,49 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script>
 	// Ver más de clases: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes
-	class Portfolio {
-
-		constructor(nombre) {
-			// Aquí usamos arguments. Ver más: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/arguments
-			if (arguments.length == 3) {
-				this.nombre = nombre;		
-			} else {
-				// Ver más console: https://developer.mozilla.org/es/docs/Web/API/Console
-				console.error("Sólo se admite 1 ó 3 argumentos en el constructor");
+	class Portfolio{
+		constructor(nombre, desc, fich){
+			if(typeof(nombre)=="string"&&nombre!=""){
+				this.nombre = nombre;
+				this.descripcion = desc;
+				this.fichero = fich;
+			}
+			else{
+				alert("Error! Introduzca texto");
 			}
 		}
-		htmlTabla() {
-			var nombre = this.nombre;
-			// Para ver explicación: http://2ality.com/2015/01/es6-strings.html
-			var htmlTR = "<tr>" + nombre +"</tr>";
-			return htmlTR;
-		}
 	}
-	// Otro artículo sobre clases: https://www.todojs.com/clases-en-ecmascript-2015-es6/
-	class ListaPortfolios {
-		alta(nombre, descripcion, fichero) {
-		}
-		eliminar(nombre) {
-		}
-		cargarDesdeLocalStorage() {
-		}
-		guardarEnLocalStorage() {
-		}
-		htmlTabla() {
-		}
-		anterior() {
-		}
-		siguiente() {
-		}
-		buscar(palabra) {
-		}
-	}
-	// var portfolios;
+	var arrayPortfolios = new Array(); 
 
-	// Otra manera de crear funciones: ver más en https://www.w3schools.com/js/js_function_definition.asp
-	var funcionActualizarTabla = function () {
+	function rellenarTabla(){
+		for (var i = 0; i < arrayPortfolios.length; i++){
+			//creamos elementos TR para cada parte
+			var tbody = $("#tbody_lista_cvs");
+			for (var i = 0; i < arrayPortfolios.length; i++){
+			var textoTR = `<tr>
+			<td>Ana Perez</td>
+			<td>Desarrolladora Front-End maquetadora y programadora</td>
+			<td><a href="ejemplo_cv_1.html">Ver CV</a></td>
+		</tr>
+		<tr>
+			<td>Rubén González</td>
+			<td>Desarrollador Front-End maquetador y marketing</td>
+			<td><a href="ejemplo_cv_2.html">Ver CV</a></td>`;
+			tbody.append(textoTR);
+			}
+		}
 	}
+/*<tr>
+	<td>Ana Perez</td>
+	<td>Desarrolladora Front-End maquetadora y programadora</td>
+	<td><a href="ejemplo_cv_1.html">Ver CV</a></td>
+</tr>
+<tr>
+	<td>Rubén González</td>
+	<td>Desarrollador Front-End maquetador y marketing</td>
+	<td><a href="ejemplo_cv_2.html">Ver CV</a></td>
+</tr>*/
+
 	var inicializar = function() {
 		$("#div_presentacion").show(1000);
 		// $("a[id^='ver_']").click(
@@ -281,6 +282,14 @@
 				mostrarDIV_Y_ocultarResto(idDIV);
 			}
 		);
+		$("#altaPortfolio").click(function(){
+			var nombre = $("#nombre").val();
+			var desc = $("#descripcion").val();
+			var fich = $("#nombre_fichero").val();
+			var objetoPortfolio = new Portfolio(nombre, desc, fich);
+			
+			arrayPortfolios.push(objetoPortfolio);
+		});
 	}
 	var mostrarDIV_Y_ocultarResto = function (id) {
 		$("#div_presentacion").hide(1000);

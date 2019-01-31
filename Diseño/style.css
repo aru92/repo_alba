@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: lightyellow;
+}
+
+h1{font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 20pt;
+	text-align: center;
+	background-color:lightskyblue;
+	
+}
+
+p{font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	background-color:lightcoral;
+	
+	font-display: optional;
+}
+.izquierda{
+	margin-left: inherit
+}
+.bloque1{
+	background-color: lightskyblue;
+	width: 30em;
+	margin: auto;
+	min-height: 5em;
+	padding: 10px;
+	
+}
+.bloque2{
+	background-color: lightseagreen;
+	width: 30em;
+	margin: auto;
+	min-height: 5em;
+	padding: 10px;
+	
+}
+.bloque3{
+	background-color: lightgreen;
+	width: 30em;
+	margin: auto;
+	min-height: 5em;
+	padding: 10px;
+	
+}
+section{
+	background-color: aqua;
+	min-height: 5em;
+	margin-top: 10px;
+	padding: 10px;
+}
+.bordecaja{
+	background-color: azure;
+	margin: 5em;
+	padding-left: 5em;
+	padding-right: 5em;
+	align-content: center;
+	
+	
+	
+}

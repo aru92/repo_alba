@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>json</title>
+</head>
+<body>
+  <script>
+//se guarda en la memoria RAM en formato binario
+    var hotel = new Object();
+    hotel.nombre = "Hotel La Estrella";
+    hotel.direccion = "C/ Abeto";
+    hotel.precio = 60.5;
+    hotel.abierto = true;
+// serializar es convertir datos binarios en formato texto 
+    var textoJSONhotel = JSON.stringify(hotel);//convierte un objeto en texto
+    document.write(textoJSONhotel);
+
+    var textoJSONotroHotel = `{
+      "nombre" : "Hotel La Luna",
+      "dirección" : "C/ Manzano",
+      "precio" : 55.4,
+      "abierto" : true
+    }`;
+    var objOtroHotel = JSON.parse(textoJSONotroHotel);
+    alert(objOtroHotel.nombre);
+
+    var miHotel = {
+      "nombre": "Hotel El Sol",
+      "direccion": "C/ Cerezo",
+      "precio": 58.6,
+      "abierto": true,
+      "nazis" : null
+    };
+    document.write(`<h2>${miHotel.nombre}</h2>`);
+    document.write(`<h2>${miHotel.precio}</h2>`);
+    document.write(`<h2>${miHotel.nazis}</h2>`);
+  </script>
+</body>
+</html>

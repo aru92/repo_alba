@@ -1,0 +1,154 @@
+@charset "utf-8";
+@import url("style2.css");
+/* CSS Document */
+header{
+	display: flex;
+	fon-size: 1em;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	width: 75%;
+	min-height: 1em;
+	background-color: lightcyan;
+	margin: auto;
+	justify-content:space-around;
+	flex-direction: row;
+	
+	
+}
+
+nav{
+	align-content: stretch;
+	text-align: inherit;
+	font-display: swap;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	width: 75%;
+	min-height: 2em;
+	background-color: lavenderblush;
+	margin: auto;
+	display: flex;
+}
+
+
+.contenedorflex{
+	width: 75%;
+	min-height: 10em;
+	background-color: lightgreen;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: stretch; 
+}
+
+
+.cajaflex{
+	width: 3em;
+	min-height: 8em;
+	margin: 5px;
+	background-color: lightpink;
+	border-radius: 10px;
+	line-height: 8em;
+	padding: 5px; 
+	font-size: 2em; 
+    text-align: center;
+ 
+	
+}
+.espaciocaja{
+	width: 25%;
+	flex-grow: 8;
+}
+
+/*animación*/
+
+.marco{
+	position: relative;
+	width: 480px;
+	height: 480px;
+	margin: auto;
+}
+
+.circulo{
+	position: absolute;
+	width: 480px;
+	height: 480px;
+	border-radius: 100%;
+	border-color: mediumturquoise;
+	border-width: 4px;
+	border-style: dotted;
+	animation-name: vueltas;
+	animation-duration: 3s;
+	animation-iteration-count: infinite
+}
+@keyframes vueltas{
+	0%{
+		width: 394px;
+		left: 0px;
+	}
+	50%{
+		width: 0px;
+		left: 394px;
+	}
+	100%{
+		width: 394px;
+		left: 0px;
+	}
+}
+.delay1{
+	animation-delay: 0.1s;
+	border-color: darkslateblue;
+}
+
+.delay2{
+	animation-delay: 0.1s;
+	border-color:midnightblue;
+}
+
+.pelota{
+	position: absolute;
+	left: 0px;
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	background-color: lightgreen;
+	box-shadow: 30px -40px 140px lightblue inset;
+	animation-name: bote;
+	animation-duration: 3s;
+	animation-iteration-count: infinite
+}
+@keyframes bote{
+	0%{
+		bottom: 300px;
+		width: 250px;
+		height: 150px;
+		left: 300px;
+	}
+	50%{
+		bottom: 0px;
+		width: 250px;
+		height: 150px;
+		left: 300px;
+	}
+	100%{
+		bottom: 200px;
+		width: 250px;
+		height: 150px;
+		left: 300px;
+	}
+}
+.delay1{
+	animation-delay: 0.1s;
+	border-color: darkslateblue;
+}
+
+.delay2{
+	animation-delay: 0.1s;
+	border-color:midnightblue;
+}
+
+body {
+	background-color: lightcyan;
+	margin: 5px;
+}
+li {
+	list-style: none;
+}
